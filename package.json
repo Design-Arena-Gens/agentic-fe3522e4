@@ -1,0 +1,20 @@
+{
+  "name": "agentic-luxury-travel",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Luxury travel content generator for social media teams.",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo \"Static site – no build step required\"",
+    "test": "echo \"No tests configured\""
+  },
+  "keywords": [
+    "luxury",
+    "travel",
+    "content",
+    "social-media",
+    "generator"
+  ],
+  "author": "",
+  "license": "UNLICENSED"
+}

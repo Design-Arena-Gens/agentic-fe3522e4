@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Voyage Atelier · Luxury Travel Content Architect</title>
+    <meta
+      name="description"
+      content="Generate high-touch luxury travel social media content and campaign assets in seconds."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div>
+          <div class="eyebrow">Voyage Atelier</div>
+          <h1>
+            Craft couture travel storytelling<br />
+            for every social surface
+          </h1>
+          <p class="hero-copy">
+            Curated destination intel, sensory storytelling, and platform-ready narratives merge to
+            deliver instantly publishable luxury travel content. From yacht-hopping in the Cyclades
+            to private riad takeovers in Marrakech, keep your feed dripping in desire.
+          </p>
+        </div>
+        <div class="metrics-block">
+          <div>
+            <span class="metric">3.2x</span>
+            <span class="metric-label">Average engagement lift</span>
+          </div>
+          <div>
+            <span class="metric">11 min</span>
+            <span class="metric-label">Saved per campaign brief</span>
+          </div>
+          <div>
+            <span class="metric">Global</span>
+            <span class="metric-label">Destination intelligence graph</span>
+          </div>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <section class="generator">
+          <div class="panel-heading">
+            <h2>Creative Direction</h2>
+            <p>
+              Dial in the journey, then let the atelier weave captions, hooks, hashtags, and shot
+              lists tailored to each platform’s cadence.
+            </p>
+          </div>
+          <form id="brief-form">
+            <div class="field-group">
+              <label for="destination">Destination</label>
+              <select id="destination" required>
+                <option value="amalfi">Amalfi Coast, Italy</option>
+                <option value="kyoto">Kyoto, Japan</option>
+                <option value="stbarts">St. Barts, French West Indies</option>
+                <option value="marrakech">Marrakech, Morocco</option>
+                <option value="patagonia">Patagonia, Chile</option>
+                <option value="seychelles">Seychelles, Indian Ocean</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label for="travel-style">Travel Signature</label>
+              <select id="travel-style" required>
+                <option value="yacht">Superyacht Residency</option>
+                <option value="palace">Heritage Palace Stay</option>
+                <option value="wellness">Immersive Wellness Retreat</option>
+                <option value="adventure">Tailored Expedition</option>
+                <option value="culinary">Chef-Led Culinary Circuit</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label>Key Platforms</label>
+              <div class="platform-grid">
+                <label><input type="checkbox" value="instagram" checked />Instagram</label>
+                <label><input type="checkbox" value="tiktok" />TikTok</label>
+                <label><input type="checkbox" value="linkedin" />LinkedIn</label>
+                <label><input type="checkbox" value="pinterest" />Pinterest</label>
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field-group">
+                <label for="angle">Narrative Angle</label>
+                <select id="angle">
+                  <option value="seamless">Seamless Escape Flow</option>
+                  <option value="culture">Culture &amp; Craftsmanship</option>
+                  <option value="culinary">Epicurean Spotlight</option>
+                  <option value="wellness">Wellness &amp; Renewal</option>
+                  <option value="adventure">High-Adrenaline Moments</option>
+                </select>
+              </div>
+              <div class="field-group">
+                <label for="voice">Brand Voice</label>
+                <select id="voice">
+                  <option value="minimal">Minimalist &amp; Iconic</option>
+                  <option value="warm">Warm Concierge</option>
+                  <option value="insider">High-Energy Insider</option>
+                  <option value="editorial">Editorial &amp; Poetic</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="hero-detail">Hero Detail</label>
+              <input
+                id="hero-detail"
+                type="text"
+                placeholder="e.g. Champagne sabrage at sunset over Positano"
+              />
+              <small>Optional: anchor moment to spotlight.</small>
+            </div>
+
+            <div class="field-group">
+              <label for="cta">Desired CTA</label>
+              <select id="cta">
+                <option value="enquire">Invite private enquiry</option>
+                <option value="waitlist">Promote insider waitlist</option>
+                <option value="itinerary">Download itinerary PDF</option>
+                <option value="consult">Book bespoke consult</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label for="story-beats">Story Beats</label>
+              <input
+                id="story-beats"
+                type="number"
+                min="3"
+                max="7"
+                value="4"
+                step="1"
+              />
+              <small>Controls the depth of the story arc &amp; carousel script.</small>
+            </div>
+
+            <button class="cta-button" type="submit">Craft Campaign</button>
+          </form>
+        </section>
+
+        <section class="output">
+          <div class="canvas-header">
+            <h2>Campaign Canvas</h2>
+            <button id="export-button" type="button" class="ghost-button">Copy All</button>
+          </div>
+          <div id="output-grid" class="output-grid">
+            <p class="placeholder">
+              Dial in your brief to conjure a signature caption, platform-native variations,
+              hashtag suite, story arc, and rich experiential prompts.
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <template id="caption-template">
+      <article class="card">
+        <header>
+          <h3></h3>
+          <button class="mini-copy" type="button">Copy</button>
+        </header>
+        <div class="card-body">
+          <p></p>
+        </div>
+      </article>
+    </template>
+
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
